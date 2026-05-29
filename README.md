@@ -25,7 +25,6 @@ Program to implement the K Means Clustering for Customer Segmentation.
 Developed by: Ajay Karthick M
 RegisterNumber:  212225040014
 
-
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
@@ -34,21 +33,15 @@ X = data[['Annual Income (k$)', 'Spending Score (1-100)']]
 print(data.head())
 kmeans = KMeans(n_clusters=5, random_state=42)
 y_kmeans = kmeans.fit_predict(X)
-
-
 data['Cluster'] = y_kmeans
-
 print("\nClustered Data:")
 print(data.head())
-
-
 plt.figure()
 plt.scatter(X[y_kmeans == 0]['Annual Income (k$)'], 
             X[y_kmeans == 0]['Spending Score (1-100)'], label='Cluster 0')
 
 plt.scatter(X[y_kmeans == 1]['Annual Income (k$)'], 
             X[y_kmeans == 1]['Spending Score (1-100)'], label='Cluster 1')
-
 plt.scatter(X[y_kmeans == 2]['Annual Income (k$)'], 
             X[y_kmeans == 2]['Spending Score (1-100)'], label='Cluster 2')
 
@@ -57,12 +50,10 @@ plt.scatter(X[y_kmeans == 3]['Annual Income (k$)'],
 
 plt.scatter(X[y_kmeans == 4]['Annual Income (k$)'], 
             X[y_kmeans == 4]['Spending Score (1-100)'], label='Cluster 4')
-
 # Plot centroids
 plt.scatter(kmeans.cluster_centers_[:,0], 
             kmeans.cluster_centers_[:,1], 
             s=200, label='Centroids')
-
 plt.title("Customer Segmentation using K-Means")
 plt.xlabel("Annual Income (k$)")
 plt.ylabel("Spending Score (1-100)")
@@ -70,10 +61,7 @@ plt.legend()
 plt.show()
 */
 ```
-
 ## Output:
-
 <img width="528" height="736" alt="image" src="https://github.com/user-attachments/assets/2587697c-e8c1-4b22-a21a-97cae0848fcd" />
-
 ## Result:
 Thus the program to implement the K Means Clustering for Customer Segmentation is written and verified using python programming.
